@@ -5,21 +5,19 @@ import itertools
 BIT_STR_LEN = 12
 
 input = inputs.get(3)
+# input = """00100
+# 11110
+# 10110
+# 10111
+# 10101
+# 01111
+# 00111
+# 11100
+# 10000
+# 11001
+# 00010
+# 01010"""
 diagnostics = [int(x, 2) for x in input.split("\n")]
-""" diagnostics = [
-    0b00100,
-    0b11110,
-    0b10110,
-    0b10111,
-    0b10101,
-    0b01111,
-    0b00111,
-    0b11100,
-    0b10000,
-    0b11001,
-    0b00010,
-    0b01010,
-] """
 count = len(diagnostics)
 
 def most_common_bit(nums, place):

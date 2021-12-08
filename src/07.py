@@ -2,8 +2,8 @@ import inputs
 import math
 
 input = inputs.get(7)
+# input = "16,1,2,0,4,2,7,1,2,14"
 positions = [int(x) for x in input.split(",")]
-#positions = [16, 1, 2, 0, 4, 2, 7, 1, 2, 14]
 
 positions.sort()
 

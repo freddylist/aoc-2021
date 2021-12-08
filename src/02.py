@@ -6,15 +6,13 @@ def parse(expression):
     return (name, int(distance))
 
 input = inputs.get(2)
+# input = """forward 5
+# down 5
+# forward 8
+# up 3
+# down 8
+# forward 2"""
 directions = [parse(expression) for expression in input.split("\n")]
-""" directions = [
-    ("forward", 5),
-    ("down", 5),
-    ("forward", 8),
-    ("up", 3),
-    ("down", 8),
-    ("forward", 2),
-] """
 
 ##########
 # Part 1 #

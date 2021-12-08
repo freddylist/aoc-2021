@@ -9,8 +9,8 @@ REST_TIME = 7
 NEW_TIME = GROW_TIME + REST_TIME
 
 input = inputs.get(6)
+# input = "3,4,3,1,2"
 initial_fishies = [int(x) for x in input.split(",")]
-#initial_fishies = [3, 4, 3, 1, 2]
 
 offsets = [NEW_TIME - x - 1 for x in initial_fishies]
 

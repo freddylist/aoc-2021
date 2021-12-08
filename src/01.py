@@ -16,8 +16,17 @@ def num_increases(values):
     return sum(b > a for a, b in sliding_window(values, 2))
 
 input = inputs.get(1)
+# input = """199
+# 200
+# 208
+# 210
+# 200
+# 207
+# 240
+# 269
+# 260
+# 263"""
 sonar_scan = [int(x) for x in input.split("\n")]
-""" sonar_scan = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263] """
 
 ##########
 # Part 1 #
