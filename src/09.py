@@ -42,10 +42,7 @@ input = inputs.get(9)
 # 8767896789
 # 9899965678"""
 
-lines = input.split("\n")
-w = max(len(line) for line in lines)
-h = len(lines)
-hm = [[int(c) for c in line] for line in lines]
+hm = [[int(c) for c in line] for line in input.split("\n")]
 
 ##########
 # Part 1 #
