@@ -1,6 +1,4 @@
 import inputs
-import math
-import itertools
 
 BIT_STR_LEN = 12
 
