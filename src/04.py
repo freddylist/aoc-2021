@@ -45,7 +45,7 @@ def answer(winning):
             winning_board = i
 
     return sum(filter(
-        lambda x : order[x] > min_max, boards[winning_board]
+        lambda x: order[x] > min_max, boards[winning_board]
     )) * drawings[min_max]
 
 ##########

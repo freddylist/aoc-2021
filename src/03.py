@@ -38,7 +38,7 @@ print(gamma * epsilon)
 def answer(nums, common):
     for i in reversed(range(BIT_STR_LEN)):
         bit = most_common_bit(nums, i) == common
-        nums = list(filter(lambda x : x >> i & 1 == bit, nums))
+        nums = list(filter(lambda x: x >> i & 1 == bit, nums))
 
         if len(nums) <= 1:
             return nums[0]
