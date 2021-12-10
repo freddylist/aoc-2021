@@ -29,11 +29,9 @@ average = gr_round(sum(positions) / len(positions))
 
 print(sum(d * (d + 1) // 2 for d in (abs(x - average) for x in positions)))
 
-"""
-I figured that the alignment position for part 2 would be the average of all
-positions.
-
-However, I have no idea why it is rounded around the decimal part of the golden
-ratio. I came to that conclusion by inspecting the average of different sets of
-positions.
-"""
+# I figured that the alignment position for part 2 would be the average of all
+# positions.
+# 
+# However, I have no idea why it is rounded around the decimal part of the golden
+# ratio. I came to that conclusion by inspecting the average of different sets of
+# positions.
