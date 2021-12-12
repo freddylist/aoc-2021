@@ -1,19 +1,8 @@
 import inputs
-import itertools
-
-def sliding_window(iterable, size):
-    it = iter(iterable)
-    window = tuple(itertools.islice(it, size))
-
-    if len(window) == size:
-        yield window
-    for x in it:
-        window = window[1:] + (x,)
-        
-        yield window
+from helpers import pairwise, sliding_window
 
 def num_increases(values):
-    return sum(b > a for a, b in sliding_window(values, 2))
+    return sum(b > a for a, b in pairwise(values))
 
 input = inputs.get(1)
 # input = """199
