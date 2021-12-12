@@ -1,5 +1,5 @@
-import inputs
 import functools
+import inputs
 
 MATCHING = {
     '(': ')',

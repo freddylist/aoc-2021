@@ -1,6 +1,6 @@
+import itertools
 import inputs
 from helpers import deep_get, deep_set, deep_enumerate, deep_update, surrounding
-import itertools
 
 ITERATIONS = 100
 

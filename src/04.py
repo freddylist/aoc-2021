@@ -1,5 +1,5 @@
-import inputs
 import re
+import inputs
 
 BOARD_SIZE = 5
 

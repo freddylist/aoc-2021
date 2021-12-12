@@ -1,5 +1,5 @@
+from itertools import chain, product, permutations
 import inputs
-import itertools
 
 input = inputs.get(8)
 
@@ -24,7 +24,7 @@ signals = [tuple(s.split(" ") for s in l.split(" | ")) for l in input.split("\n"
 
 unique_len = { 2, 3, 4, 7 }
 
-print(sum(len(s) in unique_len for s in itertools.chain.from_iterable(d for _, d in signals)))
+print(sum(len(s) in unique_len for s in chain.from_iterable(d for _, d in signals)))
 
 ##########
 # Part 2 #
@@ -60,7 +60,7 @@ def solve(patterns, output):
     for p in patterns:
         by_length[len(p)].append(to_bits(p))
 
-    for arrangement in itertools.product(*(by_length[s] for s in SEGMENTS)):
+    for arrangement in product(*(by_length[s] for s in SEGMENTS)):
         wirings = [identity_bitmask] * NUM_SEGMENTS
 
         for i, p in enumerate(arrangement):
@@ -77,7 +77,7 @@ print(sum(solve(p, d) for p, d in signals))
 # Alternative method (slower, I think... too lazy to test :P):
 
 def solve2(patterns, output):
-    for wirings in itertools.permutations(segment_bitmasks.values()):
+    for wirings in permutations(segment_bitmasks.values()):
         rewired = (rewire(to_bits(p), wirings) for p in patterns)
 
         if all(p in bit_pattern_map for p in rewired):

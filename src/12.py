@@ -1,5 +1,5 @@
-import inputs
 import collections
+import inputs
 
 START = "start"
 END = "end"

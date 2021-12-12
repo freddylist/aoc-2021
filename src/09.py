@@ -1,7 +1,7 @@
+from itertools import islice
+import math
 import inputs
 from helpers import deep_enumerate, surrounding, flood_fill
-import itertools
-import math
 
 input = inputs.get(9)
 # input = """2199943210
@@ -36,4 +36,4 @@ for p, _ in deep_enumerate(hm):
         visited |= set(flood)
         basin_sizes.append(len(flood))
 
-print(math.prod(itertools.islice(sorted(basin_sizes, reverse=True), 3)))
+print(math.prod(islice(sorted(basin_sizes, reverse=True), 3)))
